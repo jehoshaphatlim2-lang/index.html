@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENJOSH Construction Supply | Waterproofing & Hardware Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Inter + Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandYellow: '#F3B404',
+                        brandYellowDark: '#D99B00',
+                        brandTeal: '#00A88F',
+                        brandTealDark: '#00836F',
+                        brandDark: '#1A1E24',
+                        brandNavy: '#0F172A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1A1E24;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #F3B404;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D99B00;
+        }
+
+        /* Hero Background Pattern Overlay */
+        .hero-pattern {
+            background-color: #0F172A;
+            background-image: radial-gradient(#00A88F 0.75px, transparent 0.75px), radial-gradient(#F3B404 0.75px, #0F172A 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.95;
+        }
+
+        .badge-sika {
+            background: linear-gradient(135deg, #e30613 0%, #a1000b 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brandDark text-gray-300 text-xs sm:text-sm py-2 px-4 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1 text-brandYellow font-medium"><i class="fa-solid fa-clock"></i> Mon - Sat: 7:00 AM - 5:30 PM</span>
+                <span class="hidden md:inline-block text-gray-500">|</span>
+                <span class="hidden md:flex items-center gap-1"><i class="fa-solid fa-location-dot text-brandTeal"></i> High Street Construction Plaza</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+639171234567" class="hover:text-brandYellow transition"><i class="fa-solid fa-phone text-brandYellow mr-1"></i> (0917) 123-4567</a>
+                <span class="text-gray-500">|</span>
+                <a href="#contact" class="hover:text-brandTeal transition"><i class="fa-solid fa-envelope text-brandTeal mr-1"></i> Quick Inquiry</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-brandDark border-b-4 border-brandYellow shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- BRAND LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="bg-brandYellow p-2.5 rounded-lg shadow-md group-hover:bg-yellow-400 transition transform group-hover:scale-105">
+                        <i class="fa-solid fa-helmet-safety text-brandDark text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-heading font-black text-2xl tracking-tight text-white flex items-center gap-1">
+                            BENJOSH <span class="text-brandYellow">SUPPLY</span>
+                        </div>
+                        <div class="text-[10px] uppercase font-bold tracking-widest text-brandTeal">Construction & Hardware</div>
+                    </div>
+                </a>
+
+                <!-- SEARCH BAR (Desktop) -->
+                <div class="hidden lg:flex flex-1 max-w-md mx-8">
+                    <div class="relative w-full">
+                        <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search Sika waterproofing, cement, tools, PVC..." class="w-full bg-gray-800 text-white placeholder-gray-400 text-sm rounded-l-lg py-2.5 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-brandYellow border border-gray-700">
+                        <button onclick="handleSearch()" class="absolute right-0 top-0 bottom-0 px-4 bg-brandYellow hover:bg-brandYellowDark text-brandDark rounded-r-lg transition font-bold flex items-center justify-center">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DESKTOP NAV LINKS & CART -->
+                <div class="hidden md:flex items-center gap-6">
+                    <nav class="flex gap-6 font-medium text-sm text-gray-200">
+                        <a href="#featured" class="hover:text-brandYellow transition py-2">Catalog</a>
+                        <a href="#categories" class="hover:text-brandYellow transition py-2">Categories</a>
+                        <a href="#sika-special" class="hover:text-brandYellow transition py-2 text-brandYellow">Sika® Zone</a>
+                        <a href="#about" class="hover:text-brandYellow transition py-2">About Us</a>
+                        <a href="#contact" class="hover:text-brandYellow transition py-2">Contact</a>
+                    </nav>
+
+                    <!-- QUOTE CART BUTTON -->
+                    <button onclick="toggleCartDrawer()" class="relative bg-brandTeal hover:bg-brandTealDark text-white font-semibold text-sm px-4 py-2.5 rounded-lg transition flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-clipboard-list text-lg"></i>
+                        <span class="hidden xl:inline">Quote List</span>
+                        <span id="cartCountBadge" class="bg-brandYellow text-brandDark font-bold text-xs px-2 py-0.5 rounded-full">0</span>
+                    </button>
+                </div>
+
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="flex md:hidden items-center gap-3">
+                    <button onclick="toggleCartDrawer()" class="relative bg-brandTeal text-white p-2.5 rounded-lg">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        <span id="cartCountBadgeMobile" class="absolute -top-1 -right-1 bg-brandYellow text-brandDark font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="text-white hover:text-brandYellow p-2 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-900 border-t border-gray-800 px-4 pt-3 pb-6 space-y-3">
+            <div class="relative w-full mb-3">
+                <input type="text" id="mobileSearchInput" onkeyup="handleMobileSearch()" placeholder="Search products..." class="w-full bg-gray-800 text-white placeholder-gray-400 text-sm rounded-lg py-2.5 pl-4 pr-10 border border-gray-700">
+                <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+            </div>
+            <a href="#featured" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-brandYellow font-medium border-b border-gray-800">Catalog & Products</a>
+            <a href="#categories" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-brandYellow font-medium border-b border-gray-800">Browse Categories</a>
+            <a href="#sika-special" onclick="toggleMobileMenu()" class="block py-2 text-brandYellow font-medium border-b border-gray-800">Sika® Waterproofing</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-brandYellow font-medium border-b border-gray-800">Store Info</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-gray-200 hover:text-brandYellow font-medium">Get Inquiry / Quote</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH STORE MOTIF & BRAND HIGHLIGHT -->
+    <section class="relative bg-brandNavy text-white overflow-hidden py-12 lg:py-20 border-b-8 border-brandTeal">
+        <!-- Storefront Canvas Decorative Gradient -->
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-brandYellow/10 to-transparent pointer-events-none hidden lg:block"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- HERO LEFT TEXT -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brandDark/80 border border-brandYellow/40 px-3 py-1.5 rounded-full text-xs sm:text-sm text-brandYellow font-semibold backdrop-blur-sm">
+                        <span class="w-2 h-2 rounded-full bg-brandYellow animate-ping"></span>
+                        Official Storefront & Authorized Dealer
+                    </div>
+
+                    <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                        YOUR TRUSTED PARTNER FOR <span class="text-brandYellow underline decoration-brandTeal">QUALITY HARDWARE</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light">
+                        Heavy construction supplies, power tools, masonry, electrical, plumbing, and official <span class="text-white font-semibold">Sika® Waterproofing Solutions</span> for structural durability.
+                    </p>
+
+                    <!-- HERO ACTION BUTTONS -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#featured" class="bg-brandYellow hover:bg-brandYellowDark text-brandDark font-extrabold px-8 py-3.5 rounded-xl transition duration-200 shadow-xl flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-boxes-stacked"></i> Browse Catalog
+                        </a>
+                        <a href="#contact" class="bg-transparent hover:bg-white/10 text-white font-bold px-7 py-3.5 rounded-xl border-2 border-brandTeal transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-signature text-brandTeal"></i> Request Price Quote
+                        </a>
+                    </div>
+
+                    <!-- QUICK TRUST BADGES -->
+                    <div class="pt-6 grid grid-cols-3 gap-3 border-t border-gray-800 text-center lg:text-left">
+                        <div class="flex flex-col lg:flex-row items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-brandTeal text-xl"></i>
+                            <span class="text-xs text-gray-300 font-medium">100% Genuine Supplies</span>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center gap-2">
+                            <i class="fa-solid fa-truck-pickup text-brandYellow text-xl"></i>
+                            <span class="text-xs text-gray-300 font-medium">Bulk Delivery Available</span>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center gap-2">
+                            <i class="fa-solid fa-award text-brandTeal text-xl"></i>
+                            <span class="text-xs text-gray-300 font-medium">Sika Certified Partner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO RIGHT STORE CARD FEATURE -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-md bg-gradient-to-b from-brandDark to-gray-900 border-2 border-brandYellow/60 rounded-2xl shadow-2xl p-6 relative overflow-hidden">
+                        <!-- Yellow Store Top Header Visual -->
+                        <div class="bg-brandYellow text-brandDark p-4 rounded-xl font-heading font-black text-center mb-5 shadow-md">
+                            <div class="text-xs uppercase tracking-widest text-gray-900 font-bold mb-1">Store Front Showcase</div>
+                            <div class="text-2xl tracking-tight">BENJOSH HARDWARE</div>
+                            <div class="text-xs font-semibold text-gray-800 mt-1">Waterproofness & Construction Specialist</div>
+                        </div>
+
+                        <!-- Highlights list -->
+                        <div class="space-y-3.5 mb-6 text-sm">
+                            <div class="flex items-center justify-between p-3 bg-gray-800/80 rounded-lg border border-gray-700">
+                                <span class="flex items-center gap-2 font-medium text-gray-200">
+                                    <i class="fa-solid fa-droplet text-brandTeal"></i> Sika® Waterproofing
+                                </span>
+                                <span class="text-xs bg-brandTeal/20 text-brandTeal font-bold px-2 py-1 rounded">In Stock</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-800/80 rounded-lg border border-gray-700">
+                                <span class="flex items-center gap-2 font-medium text-gray-200">
+                                    <i class="fa-solid fa-fire-flame-simple text-brandYellow"></i> LPG Gas Cylinders
+                                </span>
+                                <span class="text-xs bg-brandYellow/20 text-brandYellow font-bold px-2 py-1 rounded">Refill / Swap</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-gray-800/80 rounded-lg border border-gray-700">
+                                <span class="flex items-center gap-2 font-medium text-gray-200">
+                                    <i class="fa-solid fa-screwdriver-wrench text-gray-400"></i> Power Tools & Spares
+                                </span>
+                                <span class="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2 py-1 rounded">Heavy Duty</span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Contact Button inside Card -->
+                        <a href="https://wa.me/639171234567" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Instant WhatsApp Counter Inquiry
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES QUICK NAVIGATION GRID -->
+    <section id="categories" class="py-12 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-brandTeal font-bold text-xs uppercase tracking-widest">Departments</span>
+                <h2 class="font-heading text-3xl font-extrabold text-brandDark mt-1">Explore Hardware Categories</h2>
+                <div class="h-1 w-16 bg-brandYellow mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                
+                <!-- Category 1 -->
+                <button onclick="filterCategory('waterproofing')" class="category-btn group p-5 bg-gray-50 border border-gray-200 rounded-xl hover:border-brandTeal hover:shadow-lg transition text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center text-brandTeal text-2xl mb-3 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bucket"></i>
+                    </div>
+                    <span class="font-bold text-gray-800 text-sm group-hover:text-brandTeal">Waterproofing</span>
+                    <span class="text-xs text-gray-500 mt-1">Sika, Coatings, Mortar</span>
+                </button>
+
+                <!-- Category 2 -->
+                <button onclick="filterCategory('tools')" class="category-btn group p-5 bg-gray-50 border border-gray-200 rounded-xl hover:border-brandYellowDark hover:shadow-lg transition text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-brandYellowDark text-2xl mb-3 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <span class="font-bold text-gray-800 text-sm group-hover:text-brandYellowDark">Power Tools</span>
+                    <span class="text-xs text-gray-500 mt-1">Grinders, Drills, Saws</span>
+                </button>
+
+                <!-- Category 3 -->
+                <button onclick="filterCategory('masonry')" class="category-btn group p-5 bg-gray-50 border border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-3 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <span class="font-bold text-gray-800 text-sm group-hover:text-blue-600">Masonry & Cement</span>
+                    <span class="text-xs text-gray-500 mt-1">Portland, Rebar, Sand</span>
+                </button>
+
+                <!-- Category 4 -->
+                <button onclick="filterCategory('plumbing')" class="category-btn group p-5 bg-gray-50 border border-gray-200 rounded-xl hover:border-cyan-500 hover:shadow-lg transition text-center flex flex-col items-center">
+                    <div class="w-14 h-14 bg-cyan-100 rounded-full flex items-center justify-center text-cyan-600 text-2xl mb-3 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-pipe-valve"></i>
+                    </div>
+                    <span class="font-bold text-gray-800 text-sm group-hover:text-cyan-600">Plumbing & Pipes</span>
+                    <span class="text-xs text-gray-500 mt-1">PVC, Valves, Fittings</span>
+                </button>
+
+                <!-- Category 5 -->
+                <button onclick="filterCategory('paint')" class="category-btn group p-5 bg-gray-50 border border-gray-200 rounded-xl hover:border-purple-500 hover:shadow-lg transition text-center flex flex-col items-center col-span-2 sm:col-span-1">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-2xl mb-3 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <span class="font-bold text-gray-800 text-sm group-hover:text-purple-600">Paint & Hardware</span>
+                    <span class="text-xs text-gray-500 mt-1">Enamel, Screws, Locks</span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SIKA SPECIAL AUTHORIZED DEALER SECTION -->
+    <section id="sika-special" class="py-12 bg-gradient-to-r from-yellow-500 via-amber-500 to-yellow-600 text-brandDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/90 backdrop-blur-md rounded-2xl p-6 lg:p-8 shadow-2xl border-2 border-yellow-300 flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="flex items-center gap-6">
+                    <div class="badge-sika text-white font-black text-3xl sm:text-4xl px-6 py-4 rounded-xl shadow-lg border-2 border-white flex flex-col items-center justify-center">
+                        <span>Sika®</span>
+                        <span class="text-[9px] font-normal tracking-widest uppercase">Building Trust</span>
+                    </div>
+                    <div>
+                        <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full uppercase">Official Stockist</span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-brandDark mt-1">Waterproofing Professionals</h3>
+                        <p class="text-gray-700 text-sm sm:text-base mt-1 max-w-xl">
+                            Protect roof decks, basements, bathrooms, and concrete structures with authentic SikaTop®, SikaWaterbars, and sealing compounds.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+                    <button onclick="filterCategory('waterproofing')" class="bg-brandDark hover:bg-black text-white font-bold px-6 py-3 rounded-xl transition text-center shadow-md">
+                        View Waterproofing Catalog
+                    </button>
+                    <a href="#contact" class="bg-brandTeal hover:bg-brandTealDark text-white font-bold px-6 py-3 rounded-xl transition text-center shadow-md">
+                        Inquire Technical Specs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PRODUCT CATALOG & FILTERABLE GRID -->
+    <section id="featured" class="py-16 bg-gray-100 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-brandTeal font-bold text-xs uppercase tracking-widest">Inventory List</span>
+                    <h2 class="font-heading text-3xl font-extrabold text-brandDark mt-1">Product Showcase</h2>
+                </div>
+
+                <!-- FILTER TABS -->
+                <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-semibold">
+                    <button onclick="filterCategory('all')" id="filter-all" class="filter-tab px-4 py-2 rounded-lg bg-brandDark text-brandYellow shadow-md">All Products</button>
+                    <button onclick="filterCategory('waterproofing')" id="filter-waterproofing" class="filter-tab px-4 py-2 rounded-lg bg-white text-gray-700 hover:bg-gray-200">Waterproofing</button>
+                    <button onclick="filterCategory('tools')" id="filter-tools" class="filter-tab px-4 py-2 rounded-lg bg-white text-gray-700 hover:bg-gray-200">Power Tools</button>
+                    <button onclick="filterCategory('masonry')" id="filter-masonry" class="filter-tab px-4 py-2 rounded-lg bg-white text-gray-700 hover:bg-gray-200">Masonry</button>
+                    <button onclick="filterCategory('plumbing')" id="filter-plumbing" class="filter-tab px-4 py-2 rounded-lg bg-white text-gray-700 hover:bg-gray-200">Plumbing</button>
+                    <button onclick="filterCategory('paint')" id="filter-paint" class="filter-tab px-4 py-2 rounded-lg bg-white text-gray-700 hover:bg-gray-200">Paints & Hardware</button>
+                </div>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- JavaScript renders items dynamically here -->
+            </div>
+
+            <!-- EMPTY STATE -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <i class="fa-solid fa-magnifying-glass-minus text-5xl text-gray-400 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-700">No matching hardware products found</h3>
+                <p class="text-gray-500 text-sm mt-1">Try resetting your search query or choosing another category.</p>
+                <button onclick="filterCategory('all')" class="mt-4 bg-brandYellow font-bold px-5 py-2 rounded-lg text-brandDark">Show All Products</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT & STORE IMAGE SHOWCASE -->
+    <section id="about" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- STORE FRONT DISPLAY -->
+                <div class="lg:col-span-6 relative">
+                    <div class="bg-brandYellow p-3 rounded-2xl shadow-xl">
+                        <div class="bg-brandDark rounded-xl p-6 text-white text-center relative overflow-hidden border border-yellow-400">
+                            <!-- Mimicking storefront header banner -->
+                            <div class="bg-brandYellow text-brandDark py-4 px-6 rounded-lg font-heading font-black text-xl sm:text-2xl tracking-wide shadow-md mb-6">
+                                BENJOSH CONSTRUCTION SUPPLY
+                                <div class="text-xs font-semibold uppercase text-brandDark/80 tracking-widest mt-1">Waterprofessionals • Sika Authorized</div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-3 text-left mb-4">
+                                <div class="p-3 bg-gray-800/90 rounded-lg border border-gray-700">
+                                    <i class="fa-solid fa-store text-brandYellow text-xl mb-1"></i>
+                                    <div class="font-bold text-sm">Physical Store</div>
+                                    <div class="text-xs text-gray-400">Walk-in counter & pickup</div>
+                                </div>
+                                <div class="p-3 bg-gray-800/90 rounded-lg border border-gray-700">
+                                    <i class="fa-solid fa-truck text-brandTeal text-xl mb-1"></i>
+                                    <div class="font-bold text-sm">Site Delivery</div>
+                                    <div class="text-xs text-gray-400">Fast transport for heavy loads</div>
+                                </div>
+                            </div>
+
+                            <div class="text-xs text-gray-400 italic">
+                                Visit our store for complete waterproofing solutions, heavy masonry supplies, paints, power tools, and cooking gas refills.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ABOUT TEXT CONTENT -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brandTeal font-bold text-xs uppercase tracking-widest">About Benjosh Hardware</span>
+                    <h2 class="font-heading text-3xl font-extrabold text-brandDark leading-tight">
+                        Building Stronger Structures with Proven Quality Materials
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        At <strong class="text-brandDark">BENJOSH Construction Supply</strong>, we cater to contractors, master builders, plumbers, electricians, and homeowners. Whether you are waterproofing a concrete roof deck or equipping your job site with heavy-duty tools, we deliver reliable products right on time.
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-emerald-100 text-brandTeal p-2 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-check font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">Authorized Sika® Waterproofing Partner</h4>
+                                <p class="text-xs text-gray-500">Expert guidance on structural sealants, mortars, and waterbar installation.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="bg-amber-100 text-brandYellowDark p-2 rounded-lg mt-0.5">
+                                <i class="fa-solid fa-check font-bold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 text-sm">Comprehensive Hardware Selection</h4>
+                                <p class="text-xs text-gray-500">From structural rebar and cement to electrical wiring, plumbing fittings, and LPG.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-brandDark text-brandYellow font-bold px-6 py-3 rounded-xl hover:bg-black transition">
+                            <i class="fa-solid fa-map-location-dot"></i> Visit Store Location
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & QUOTE INQUIRY SECTION -->
+    <section id="contact" class="py-16 bg-brandNavy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-brandYellow font-bold text-xs uppercase tracking-widest">Get In Touch</span>
+                <h2 class="font-heading text-3xl font-extrabold text-white mt-1">Contact & Request Quotation</h2>
+                <p class="text-gray-400 text-sm mt-2">Send us your bill of materials or product inquiries for instant pricing and stock confirmation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- STORE DETAILS & HOURS -->
+                <div class="lg:col-span-5 space-y-6 bg-brandDark p-6 sm:p-8 rounded-2xl border border-gray-800">
+                    <h3 class="font-heading font-bold text-xl text-brandYellow mb-4 border-b border-gray-800 pb-3">Store Contact Info</h3>
+                    
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brandTeal text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Physical Store Address</strong>
+                                BENJOSH Construction Supply Main Highway Storefront, Philippines
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-brandYellow text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Phone / Mobile Inquiries</strong>
+                                (0917) 123-4567 / (0998) 765-4321
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope text-brandTeal text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Email Quote Requests</strong>
+                                sales@benjoshhardware.com
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-clock text-brandYellow text-lg mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Operating Hours</strong>
+                                Monday – Saturday: 7:00 AM – 5:30 PM<br>
+                                Sunday: Closed / Emergency Pickups
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Messaging Buttons -->
+                    <div class="pt-4 border-t border-gray-800 space-y-3">
+                        <a href="https://wa.me/639171234567" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition text-sm">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp
+                        </a>
+                        <a href="tel:+639171234567" class="w-full bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition text-sm border border-gray-700">
+                            <i class="fa-solid fa-phone text-brandYellow"></i> Call Sales Representative
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CONTACT / QUOTE FORM -->
+                <div class="lg:col-span-7 bg-white text-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <h3 class="font-heading font-bold text-xl text-brandDark mb-4 border-b pb-3">Submit Price Quote Request</h3>
+                    
+                    <form id="inquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name *</label>
+                                <input type="text" required placeholder="e.g. Juan Cruz" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brandYellow focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Contact Number *</label>
+                                <input type="tel" required placeholder="e.g. 0917XXXXXXX" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brandYellow focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Project / Delivery Address</label>
+                                <input type="text" placeholder="City / Barangay location" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brandYellow focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Category of Interest</label>
+                                <select class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brandYellow focus:outline-none">
+                                    <option>Sika Waterproofing</option>
+                                    <option>Bulk Masonry & Cement</option>
+                                    <option>Power Tools & Machinery</option>
+                                    <option>Plumbing & Electrical</option>
+                                    <option>Paints & General Hardware</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Item Details & Quantity Needed *</label>
+                            <textarea id="quoteMessage" rows="4" required placeholder="List the items you need (e.g. 10 bags SikaTop 107 Seal, 5 pcs 4-inch PVC Pipes, 2 pails enamel paint...)" class="w-full bg-gray-50 border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brandYellow focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brandYellow hover:bg-brandYellowDark text-brandDark font-extrabold py-3.5 rounded-xl transition shadow-lg flex items-center justify-center gap-2 text-base">
+                            <i class="fa-solid fa-paper-plane"></i> Send Quotation Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 text-gray-400 text-xs py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-white text-sm">BENJOSH Construction Supply</p>
+                <p class="mt-0.5 text-gray-500">© <span id="currentYear"></span> All rights reserved. Sika® trademark belongs to Sika AG.</p>
+            </div>
+            <div class="flex gap-4 text-sm">
+                <a href="#featured" class="hover:text-brandYellow">Catalog</a>
+                <a href="#sika-special" class="hover:text-brandYellow">Waterproofing</a>
+                <a href="#contact" class="hover:text-brandYellow">Inquiry</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-OVER QUOTE CART DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+        <div onclick="toggleCartDrawer()" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            <div class="pointer-events-auto w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <div class="bg-brandDark text-white p-5 flex items-center justify-between border-b-4 border-brandYellow">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-list text-brandYellow text-xl"></i>
+                        <h2 class="font-heading font-bold text-lg">Your Quote List</h2>
+                    </div>
+                    <button onclick="toggleCartDrawer()" class="text-gray-400 hover:text-white text-xl">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- CART ITEMS CONTAINER -->
+                <div id="cartItemsList" class="flex-1 overflow-y-auto p-5 space-y-4">
+                    <!-- Dynamic rendering -->
+                </div>
+
+                <!-- CART FOOTER -->
+                <div class="p-5 border-t border-gray-200 bg-gray-50 space-y-3">
+                    <div class="flex justify-between font-bold text-base text-brandDark">
+                        <span>Estimated Total Value:</span>
+                        <span id="cartTotalDisplay" class="text-brandTeal">₱0.00</span>
+                    </div>
+                    <p class="text-xs text-gray-500 italic">Final pricing and volume discounts will be confirmed by our sales counter.</p>
+                    <button onclick="checkoutQuote()" class="w-full bg-brandTeal hover:bg-brandTealDark text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
+                        <i class="fa-solid fa-paper-plane"></i> Send List for Inquiry
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT QUICK VIEW MODAL -->
+    <div id="productModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative animate-fade-in">
+            <button onclick="closeProductModal()" class="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 text-gray-700 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modalContent" class="p-6">
+                <!-- JavaScript Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brandDark border-2 border-brandYellow text-white px-5 py-3 rounded-xl shadow-2xl transition transform translate-y-20 opacity-0 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-brandYellow text-xl"></i>
+        <span id="toastMsg" class="text-sm font-medium">Item added to your quote list!</span>
+    </div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        // HARDWARE PRODUCT DATABASE BASED ON REAL STORE PRODUCTS
+        const products = [
+            {
+                id: 1,
+                name: "SikaTop® 107 Seal Waterproofing Mortar",
+                category: "waterproofing",
+                price: 1850,
+                rating: 5.0,
+                reviews: 42,
+                image: "https://placehold.co/400x300/1A1E24/F3B404?text=SikaTop+107+Seal",
+                badge: "Top Seller",
+                inStock: true,
+                desc: "Two-part polymer modified cementitious waterproofing mortar for water tanks, basements, and wet areas."
+            },
+            {
+                id: 2,
+                name: "Sika® Multiseal Bituminous Sealing Tape",
+                category: "waterproofing",
+                price: 450,
+                rating: 4.8,
+                reviews: 29,
+                image: "https://placehold.co/400x300/1A1E24/00A88F?text=Sika+Multiseal+Tape",
+                badge: "Sika Stock",
+                inStock: true,
+                desc: "Self-adhesive, rubber modified bituminous sealing tape for repairing leaks on roofs, gutters, and downspouts."
+            },
+            {
+                id: 3,
+                name: "Makita 4-Inch Angle Grinder 840W",
+                category: "tools",
+                price: 3400,
+                rating: 4.9,
+                reviews: 58,
+                image: "https://placehold.co/400x300/1A1E24/F3B404?text=4in+Angle+Grinder",
+                badge: "Heavy Duty",
+                inStock: true,
+                desc: "Compact angle grinder with powerful 840W motor for masonry cutting and metal grinding."
+            },
+            {
+                id: 4,
+                name: "Bosch Cordless Hammer Drill 18V Kit",
+                category: "tools",
+                price: 6850,
+                rating: 4.7,
+                reviews: 31,
+                image: "https://placehold.co/400x300/1A1E24/00A88F?text=Cordless+Drill+18V",
+                badge: "Popular",
+                inStock: true,
+                desc: "Versatile 18V impact cordless drill with dual lithium batteries and fast charger included."
+            },
+            {
+                id: 5,
+                name: "Portland Cement (40kg Bag)",
+                category: "masonry",
+                price: 245,
+                rating: 4.9,
+                reviews: 110,
+                image: "https://placehold.co/400x300/1A1E24/FFFFFF?text=Portland+Cement+40kg",
+                badge: "Bulk Stock",
+                inStock: true,
+                desc: "Premium grade Portland cement suitable for structural concrete, masonry, and plastering works."
+            },
+            {
+                id: 6,
+                name: "Deformed Steel Rebar 12mm x 6m",
+                category: "masonry",
+                price: 295,
+                rating: 4.8,
+                reviews: 74,
+                image: "https://placehold.co/400x300/1A1E24/F3B404?text=Steel+Rebar+12mm",
+                badge: "Grade 33/40",
+                inStock: true,
+                desc: "High-yield deformed steel reinforcing bars for concrete beams, slabs, and columns."
+            },
+            {
+                id: 7,
+                name: "Sanitary PVC Pipe 4-Inch (10ft)",
+                category: "plumbing",
+                price: 380,
+                rating: 4.6,
+                reviews: 18,
+                image: "https://placehold.co/400x300/1A1E24/00A88F?text=PVC+Pipe+4in",
+                badge: "Standard",
+                inStock: true,
+                desc: "Heavy-gauge thick wall PVC pipe for drainage, waste, and vent plumbing installations."
+            },
+            {
+                id: 8,
+                name: "Brass Gate Valve 3/4-Inch Threaded",
+                category: "plumbing",
+                price: 260,
+                rating: 4.7,
+                reviews: 22,
+                image: "https://placehold.co/400x300/1A1E24/F3B404?text=Brass+Gate+Valve",
+                badge: "Rust Proof",
+                inStock: true,
+                desc: "Solid brass water control gate valve designed for high pressure residential plumbing."
+            },
+            {
+                id: 9,
+                name: "Quick-Dry Enamel Paint (4 Liters)",
+                category: "paint",
+                price: 780,
+                rating: 4.8,
+                reviews: 35,
+                image: "https://placehold.co/400x300/1A1E24/00A88F?text=Enamel+Paint+4L",
+                badge: "Gloss Finish",
+                inStock: true,
+                desc: "Alkyd-based enamel topcoat providing a durable, high-gloss finish for wood and metal surfaces."
+            },
+            {
+                id: 10,
+                name: "LPG Gas Cylinder 11kg Refill / Tank",
+                category: "paint",
+                price: 1050,
+                rating: 4.9,
+                reviews: 89,
+                image: "https://placehold.co/400x300/1A1E24/F3B404?text=LPG+11kg+Cylinder",
+                badge: "Store Pickup",
+                inStock: true,
+                desc: "Safety-tested LPG cooking gas refill cylinder available for instant exchange or new purchase."
+            }
+        ];
+
+        // CART STATE
+        let cart = [];
+
+        // INITIALIZATION
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts(products);
+            document.getElementById('currentYear').innerText = new Date().getFullYear();
+        });
+
+        // RENDER PRODUCTS GRID
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            const emptyState = document.getElementById('emptyState');
+
+            if (items.length === 0) {
+                grid.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            grid.innerHTML = items.map(product => `
+                <div class="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative bg-gray-900 group">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover group-hover:opacity-90 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-brandYellow text-brandDark font-extrabold text-[10px] uppercase px-2.5 py-1 rounded-md shadow">
+                            ${product.badge}
+                        </span>
+                        <button onclick="openProductModal(${product.id})" class="absolute bottom-3 right-3 bg-brandDark/80 hover:bg-brandDark text-white p-2 rounded-lg text-xs backdrop-blur-sm transition">
+                            <i class="fa-solid fa-expand mr-1"></i> Quick View
+                        </button>
+                    </div>
+
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="font-bold text-gray-700 ml-1">${product.rating}</span>
+                                <span class="text-gray-400">(${product.reviews})</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-base leading-snug hover:text-brandTeal cursor-pointer" onclick="openProductModal(${product.id})">
+                                ${product.name}
+                            </h3>
+                            <p class="text-gray-500 text-xs mt-2 line-clamp-2">${product.desc}</p>
+                        </div>
+
+                        <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Estimated Price</span>
+                                <span class="text-lg font-extrabold text-brandDark">₱${product.price.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
+                            </div>
+                            <button onclick="addToCart(${product.id})" class="bg-brandTeal hover:bg-brandTealDark text-white p-2.5 rounded-lg transition flex items-center gap-1 text-xs font-bold shadow-md">
+                                <i class="fa-solid fa-plus"></i> Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // FILTER CATEGORY
+        function filterCategory(cat) {
+            // Update active tab buttons styling
+            document.querySelectorAll('.filter-tab').forEach(btn => {
+                btn.className = "filter-tab px-4 py-2 rounded-lg bg-white text-gray-700 hover:bg-gray-200";
+            });
+            const activeBtn = document.getElementById(`filter-${cat}`);
+            if (activeBtn) {
+                activeBtn.className = "filter-tab px-4 py-2 rounded-lg bg-brandDark text-brandYellow shadow-md font-bold";
+            }
+
+            if (cat === 'all') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.category === cat);
+                renderProducts(filtered);
+            }
+        }
+
+        // SEARCH FUNCTIONALITY
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = products.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.desc.toLowerCase().includes(query) ||
+                p.category.toLowerCase().includes(query)
+            );
+            renderProducts(filtered);
+        }
+
+        function handleMobileSearch() {
+            const query = document.getElementById('mobileSearchInput').value.toLowerCase();
+            const filtered = products.filter(p => 
+                p.name.toLowerCase().includes(query) || 
+                p.desc.toLowerCase().includes(query)
+            );
+            renderProducts(filtered);
+        }
+
+        // CART ACTIONS
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const existing = cart.find(item => item.id === id);
+
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartUI();
+            showToast(`Added ${product.name} to quote list`);
+        }
+
+        function updateQuantity(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(i => i.id !== id);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            document.getElementById('cartCountBadge').innerText = totalCount;
+            document.getElementById('cartCountBadgeMobile').innerText = totalCount;
+            document.getElementById('cartTotalDisplay').innerText = `₱${totalPrice.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
+
+            const listContainer = document.getElementById('cartItemsList');
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="text-center py-12 text-gray-400">
+                        <i class="fa-solid fa-clipboard text-4xl mb-3"></i>
+                        <p class="text-sm font-medium">Your quote cart is empty.</p>
+                        <p class="text-xs mt-1">Browse products and tap "Add to Quote".</p>
+                    </div>
+                `;
+                return;
+            }
+
+            listContainer.innerHTML = cart.map(item => `
+                <div class="flex items-center gap-3 p-3 bg-gray-50 border border-gray-200 rounded-lg">
+                    <img src="${item.image}" alt="${item.name}" class="w-14 h-14 object-cover rounded-md bg-gray-800">
+                    <div class="flex-1 min-w-0">
+                        <h4 class="font-bold text-xs text-gray-800 truncate">${item.name}</h4>
+                        <div class="text-xs text-brandTeal font-semibold">₱${item.price.toLocaleString()}</div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <button onclick="updateQuantity(${item.id}, -1)" class="w-5 h-5 bg-gray-200 text-gray-700 rounded flex items-center justify-center text-xs font-bold">-</button>
+                            <span class="text-xs font-bold">${item.qty}</span>
+                            <button onclick="updateQuantity(${item.id}, 1)" class="w-5 h-5 bg-gray-200 text-gray-700 rounded flex items-center justify-center text-xs font-bold">+</button>
+                        </div>
+                    </div>
+                    <button onclick="removeFromCart(${item.id})" class="text-gray-400 hover:text-red-500 p-1">
+                        <i class="fa-solid fa-trash-can text-sm"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function toggleCartDrawer() {
+            document.getElementById('cartDrawer').classList.toggle('hidden');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // QUICK VIEW MODAL
+        function openProductModal(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex flex-col gap-4">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-56 object-cover rounded-xl bg-gray-900">
+                    <div>
+                        <span class="text-xs font-bold uppercase bg-brandYellow/20 text-brandDark px-2.5 py-1 rounded">
+                            ${product.badge}
+                        </span>
+                        <h3 class="font-heading font-extrabold text-xl text-brandDark mt-2">${product.name}</h3>
+                        <p class="text-sm text-gray-600 mt-2">${product.desc}</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-b py-3 my-2">
+                        <div>
+                            <div class="text-xs text-gray-400">Unit Price</div>
+                            <div class="text-2xl font-black text-brandDark">₱${product.price.toLocaleString()}</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-xs text-gray-400">Stock Status</div>
+                            <div class="text-xs font-bold text-emerald-600">Available at Counter</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button onclick="addToCart(${product.id}); closeProductModal();" class="flex-1 bg-brandTeal hover:bg-brandTealDark text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-plus"></i> Add to Quote List
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('productModal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // CHECKOUT & FORM SUBMISSION
+        function checkoutQuote() {
+            if (cart.length === 0) {
+                alert("Your quote list is empty! Please add items first.");
+                return;
+            }
+
+            const itemList = cart.map(i => `- ${i.name} (Qty: ${i.qty})`).join('\n');
+            document.getElementById('quoteMessage').value = `I would like to inquire about pricing and availability for:\n${itemList}`;
+            toggleCartDrawer();
+
+            // Scroll smoothly to contact section
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            showToast("Quote items copied to inquiry form!");
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast("Thank you! Your quote request has been sent to BENJOSH Hardware.");
+            document.getElementById('inquiryForm').reset();
+        }
+
+        // TOAST NOTIFICATION
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
